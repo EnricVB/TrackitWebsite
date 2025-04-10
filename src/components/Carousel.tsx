@@ -25,7 +25,7 @@ const Carousel: React.FC<CarouselProps> = ({ content }) => {
     <div className='carouselContainer'>
       <Slider {...settings}>
         {content.map((item, index) => (
-          <div key={index}>
+          <div key={index} className='carouselContent'>
             {typeof item === "string" || typeof item === "number" ? 
               (<h3>{item}</h3>) : (item)
             }

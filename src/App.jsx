@@ -4,6 +4,9 @@ import 'asciinema-player/dist/bundle/asciinema-player.css';
 
 import AsciinemaPlayer from './components/AsciinemaPlayer';
 import ImageCarousel from './components/Carousel';
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCodeBranch, faExclamationCircle, faFile, faLaptopHouse, faSquareBinary, faUserTag } from '@fortawesome/free-solid-svg-icons'
 
 import trackitIcon from './assets/icons/trackit-icon.png';
 import commit from './assets/command/commit.svg';
@@ -103,7 +106,63 @@ class App extends React.Component {
           </div>
         </div>
 
-        {/* Sección de descarga */}
+
+          {/* Sección "Porque Trackit" */}
+          <div className="whyTrackitSection">
+            <h2 className="whyTrackitTitle">Por qué TRACKIT</h2>
+
+            <div className="whyTrackitReasons">
+              <span className="whyTrackitReason">
+                <FontAwesomeIcon icon={faCodeBranch} size="3x"/>
+                <h3>Gestión de versiones</h3>
+                <p>
+                  TRACKIT te permite llevar un control preciso de las versiones de tu proyecto, gestionando tanto archivos pequeños como grandes con eficiencia, asegurando que siempre tengas acceso a la versión correcta y actualizada de tus archivos.
+                </p>
+              </span>
+
+              <span className="whyTrackitReason">
+                <FontAwesomeIcon icon={faUserTag} size="3x"/>
+                <h3>Control avanzado de permisos</h3>
+                <p>
+                  Con TRACKIT, puedes gestionar permisos y roles de manera detallada, garantizando que solo las personas adecuadas tengan acceso a las ramas, cambios y recursos críticos, mejorando la seguridad y la colaboración dentro de tu equipo.
+                </p>
+              </span>
+              
+              <span className="whyTrackitReason">
+                <FontAwesomeIcon icon={faLaptopHouse} size="3x"/>
+                <h3>Repositorios remotos</h3>
+                <p>
+                  TRACKIT facilita la sincronización de tus proyectos con repositorios remotos, permitiendo operaciones de push y fetch con facilidad. Además, soporta configuraciones de múltiples protocolos, como SSH y Local, para asegurar la flexibilidad en tu flujo de trabajo.
+                </p>
+              </span>
+
+              <span className="whyTrackitReason">
+                <FontAwesomeIcon icon={faSquareBinary} size="3x"/>
+                <h3>Optimización de la gestión de archivos binarios</h3>
+                <p>
+                  TRACKIT optimiza la gestión de archivos binarios grandes, lo que es crucial para proyectos que dependen de estos tipos de archivos, como juegos, multimedia o software de ingeniería, asegurando que el control de versiones no afecte al rendimiento.
+                </p>
+              </span>
+
+              <span className="whyTrackitReason">
+                <FontAwesomeIcon icon={faExclamationCircle} size="3x"/>
+                <h3>Fusión avanzada y resolución de conflictos</h3>
+                <p>
+                  Con TRACKIT, puedes manejar múltiples tipos de conflictos durante las fusiones, lo que te permite resolver discrepancias de manera eficiente y sin comprometer la integridad de tu proyecto. Esto mejora la colaboración en equipos grandes y distribuidos.
+                </p>
+              </span>
+
+              <span className="whyTrackitReason">
+                <FontAwesomeIcon icon={faFile} size="3x"/>
+                <h3>Mejora el rendimiento con un sistema de archivos eficiente</h3>
+                <p>
+                  TRACKIT está diseñado para manejar archivos grandes y binarios de forma eficiente, utilizando algoritmos avanzados para garantizar un rendimiento rápido y escalable, incluso en proyectos complejos.
+                </p>
+              </span>
+            </div>
+          </div>
+        
+        {/*
         <div className="downloadSection">
           <div className="downloadButtons">
             <div className="downloadButtonsSection">
@@ -126,12 +185,26 @@ class App extends React.Component {
             </ul>
           </div>
         </div>
-
+        */}
+        {/*
         <div className="asciinemaPlayer">
           <h1>Trackit Usage</h1>
           <AsciinemaPlayer src="/test.cast" rows={50} idleTimeLimit={3} preload={true}/>
         </div>
+        */}
 
+        {/* Sección "Aprender más" */}
+        <div className="learnMoreSection">
+          <h2>¿Quieres aprender más?</h2>
+          <p>
+            Descubre más sobre Trackit, su implementación, y cómo sacarle el máximo provecho en nuestros
+            <a href="https://github.com/EnricVB/Trackit" target="_blank" rel="noopener noreferrer">
+              : recursos y documentación.
+            </a>
+          </p>
+        </div>
+
+        {/* Footer */}
         <footer className="footer">
           <p>© 2025 Trackit | <a href="https://github.com/EnricVB/Trackit">GitHub</a> | MIT License</p>
         </footer>
