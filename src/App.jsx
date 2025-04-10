@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css';
+import './styles/App.css';
 import 'asciinema-player/dist/bundle/asciinema-player.css';
 
 import AsciinemaPlayer from './components/AsciinemaPlayer';
@@ -16,56 +16,6 @@ import stageIgnored from './assets/command/stageignored.svg';
 import status from './assets/command/status.svg';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      downloadSection: [],
-      selectedOS: 'windows',
-    };
-  }
-
-  componentDidMount() {
-    this.handleDownloadClick('windows'); // Cargar sección por defecto
-  }
-
-  createDownloadSection = (os, label, fileName) => (
-    <div className={`${os}Section`}>
-      <button href={`/trackit-${fileName}.zip`} className="downloadButton downloadButtonLeft">
-        Descargar
-      </button>
-      
-      <button href={`/trackit-${fileName}.zip`} className="downloadButton downloadButtonRight">
-        {os === 'windows' && '.exe (Windows)'}
-        {os === 'macos' && '.dmg (macOS)'}
-        {os === 'linux' && '.tar.gz (Linux)'}
-      </button>
-    </div>
-  );
-
-  handleDownloadClick = (os) => {
-    const osLabels = {
-      windows: 'Windows',
-      macos: 'macOS',
-      linux: 'Linux'
-    };
-
-    const sectionContent = [
-      <div className="downloadSectionTitle" key="title">
-        <h1>Trackit - VSC</h1>
-        <h3>Tu Sistema de Control de Versiones más seguro e integro.</h3>
-      </div>,
-      this.createDownloadSection(os, osLabels[os], os)
-    ];
-
-    this.setState({ downloadSection: sectionContent, selectedOS: os });
-  };
-
-  renderDownloadButton = (osKey, label) => (
-    <a onClick={(e) => { this.handleDownloadClick(osKey); }} key={osKey}>
-      <download className={this.state.selectedOS === osKey ? 'selected' : ''}>{label}</download>
-    </a>
-  );
-
   render() {
     return (
       <div className="website">
