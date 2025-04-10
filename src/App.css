@@ -6,21 +6,25 @@ body {
 
 /* ───────────── GENERAL HEADER ───────────── */
 div.header {
-  padding-top: 10px;
-  padding-bottom: 5px;
-  background-color: #363840;
+  background-color: #363840ce;
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 20px 50px #243035;
+
+  width: 100%;
+
+  z-index: 1000;
+  transition: top 0.3s;
+  position: fixed;
 }
 
 /* ───────────── HEADER TITLE ───────────── */
 div.headerTitle {
-  border-bottom: 2px solid #464850;
-  padding-bottom: 20px;
   display: flex;
   align-items: center;
   flex-direction: row;
   height: 5em;
   padding-left: 20%;
-  padding-right: 20%;
+  padding-right: 7%;
 }
 
 h1.headerTitle {
@@ -35,17 +39,31 @@ h1.headerSubtitle {
   margin-top: 2rem;
 }
 
-/* ───────────── HEADER DESCRIPTION ───────────── */
-div.headerDescription {
+.downloadButtonInHeader {
+  margin-left: auto;
+
+  margin-top: 1.5rem;
+  color: #aaebd7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.downloadButtonInHeader:hover {
+  color: #0f0;
+  text-decoration: underline;
+}
+
+/* ───────────── DESCRIPTION ───────────── */
+div.description {
   background-color: #464a57;
   display: flex;
   justify-content: space-between;
-  padding-top: 1em;
+  padding-top: 6em;
   padding-bottom: 4em;
   flex-wrap: wrap;
 }
 
-div.headerDescriptionText {
+div.descriptionText {
   overflow-wrap: break-word;
   padding-left: 20%;
   padding-right: 2%;
@@ -54,7 +72,7 @@ div.headerDescriptionText {
   flex: 1 1 400px;
 }
 
-div.headerDescriptionImage {
+div.descriptionImage {
   margin-right: 7%;
 }
 
@@ -310,7 +328,7 @@ footer a {
 /* ───────────── RESPONSIVE ───────────── */
 
 @media (max-width: 1800px) {
-  div.headerDescription {
+  div.description {
     background-color: #464a57;
     display: flex;
     align-items: center;
@@ -340,7 +358,7 @@ footer a {
     max-height: fit-content;
   }
 
-  div.headerDescriptionText {
+  div.descriptionText {
     overflow-wrap: break-word;
     margin-right: 20%;
   }
@@ -373,7 +391,7 @@ footer a {
     max-width: fit-content;
   }
 
-  div.headerDescription {
+  div.description {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -381,7 +399,7 @@ footer a {
     padding-bottom: 0;
   }
 
-  div.headerDescriptionText {
+  div.descriptionText {
     overflow-wrap: break-word;
   }
 
