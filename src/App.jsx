@@ -4,7 +4,6 @@ import 'asciinema-player/dist/bundle/asciinema-player.css';
 
 import AsciinemaPlayer from './components/AsciinemaPlayer';
 import ImageCarousel from './components/Carousel';
-import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faExclamationCircle, faFile, faLaptopHouse, faSquareBinary, faUserTag } from '@fortawesome/free-solid-svg-icons';
 
@@ -78,9 +77,14 @@ class App extends React.Component {
             <h1 className="headerSubtitle">Sistema de Control de Versiones</h1>
             
             {/* Botón de descarga en el Header */}
-            <a className="downloadButtonInHeader" href="https://github.com/EnricVB/Trackit" target="_blank" rel="noopener noreferrer">
-              Descargar Trackit
-            </a>
+            <div className="buttonsInHeader">
+              <a href="https://github.com/EnricVB/Trackit" target="_blank" rel="noopener noreferrer">
+                Descargar Trackit
+              </a>
+              <a href="#whyTrackit">
+                Más sobre Trackit
+              </a>
+            </div>
           </div>
         </div>
 
@@ -111,7 +115,7 @@ class App extends React.Component {
         </div>
         
         {/* Sección "Porque Trackit" */}
-        <div className="whyTrackitSection">
+        <div id="whyTrackit" className="whyTrackitSection">
           <h2 className="whyTrackitTitle">Por qué TRACKIT</h2>
 
           <div className="whyTrackitReasons">
