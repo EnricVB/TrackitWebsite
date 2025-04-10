@@ -10,7 +10,7 @@ type CarouselProps = {
 
 const Carousel: React.FC<CarouselProps> = ({ content }) => {
   const settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     slidesToShow: 1,

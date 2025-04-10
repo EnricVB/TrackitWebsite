@@ -58,7 +58,7 @@ div.description {
   background-color: #464a57;
   display: flex;
   justify-content: space-between;
-  padding-top: 10em;
+  padding-top: 8em;
   padding-bottom: 5em;
   flex-wrap: wrap;
 }
@@ -334,8 +334,8 @@ footer a {
     align-items: center;
     flex-direction: row;
     
-    padding-top: 2em;
-    padding-bottom: 3em;
+    padding-top: 8em;
+    padding-bottom: 5em;
     flex-wrap: wrap;
   }  
 
@@ -392,6 +392,8 @@ footer a {
   }
 
   div.description {
+    padding-top: 8em;
+    padding-bottom: 5em;
     display: flex;
     flex-direction: column;
     text-align: center;
