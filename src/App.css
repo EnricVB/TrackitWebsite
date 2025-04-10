@@ -1,0 +1,317 @@
+/* ───────────── GENERAL ───────────── */
+body {
+  min-width: 320px;
+}
+
+/* ───────────── GENERAL HEADER ───────────── */
+div.header {
+  background-color: #363840;
+}
+
+/* ───────────── HEADER TITLE ───────────── */
+div.headerTitle {
+  border-bottom: 2px solid #464850;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 5em;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+h1.headerTitle {
+  color: antiquewhite;
+  font-size: 2.5em;
+}
+
+h1.headerSubtitle {
+  color: #aaebd7;
+  font-size: 2em;
+  margin-left: 1em;
+  margin-top: 2rem;
+}
+
+/* ───────────── HEADER DESCRIPTION ───────────── */
+div.headerDescription {
+  background-color: #464a57;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3em;
+  padding-bottom: 4em;
+  flex-wrap: wrap;
+}
+
+div.headerDescriptionText {
+  overflow-wrap: break-word;
+  padding-left: 22.5%;
+  padding-right: 2%;
+  text-align: justify;
+  flex: 1 1 400px;
+}
+
+div.headerDescriptionImage {
+  margin-right: 7%;
+}
+
+/* ───────────── DOWNLOAD SECTION ───────────── */
+div.downloadSection {
+  overflow-wrap: anywhere;
+  padding-left: 22%;
+  padding-right: 7%;
+  padding-top: 5em;
+  padding-bottom: 7em;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+div.downloadSectionTitle h1 {
+  color: antiquewhite;
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+div.downloadSectionTitle h3 {
+  color: antiquewhite;
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+div.downloadSectionTitle {
+  margin-bottom: 3em;
+}
+
+.downloadButtons {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.downloadButtons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ───────────── DOWNLOAD TEXT ───────────── */
+download {
+  color: antiquewhite;
+  font-size: 1.3em;
+  margin: 0.5em;
+}
+
+download.selected,
+download:hover {
+  border-bottom: 1px solid antiquewhite;
+  cursor: pointer;
+}
+
+/* ───────────── DOWNLOAD BUTTON ───────────── */
+.downloadButton {
+  background-color: #2d2b55;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition-duration: 0.2s;
+}
+
+.downloadButtonLeft {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 1px;
+  padding: 1em 1.5em;
+}
+
+.downloadButtonRight {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: 1px;
+  padding: 1em 3em;
+}
+
+.downloadButton:hover {
+  background-color: #3d3a72;
+  cursor: pointer;
+}
+
+/* ───────────── REQUIREMENTS ───────────── */
+.systemRequirements {
+  background-color: #3a414c;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #d9d9d9;
+  max-width: 700px;
+  flex: 1 1 300px;
+}
+
+.systemRequirements h3 {
+  color: antiquewhite;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+.systemRequirements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.systemRequirements li {
+  margin-bottom: 0.8em;
+  font-size: 1.05em;
+  position: relative;
+  padding-left: 1.4em;
+}
+
+.systemRequirements li::before {
+  content: "✔";
+  color: #a2cab7;
+  position: absolute;
+  left: 0;
+}
+
+/* ───────────── TEXT STYLES ───────────── */
+b {
+  color: #ece7e7;
+  font-weight: bold;
+}
+
+p {
+  color: #a2cab7;
+  font-size: 1.15em;
+}
+
+/* ───────────── ICONS / IMAGES ───────────── */
+.carouselContainer {
+  width: 200%;
+  max-width: 800px;
+  margin-right: 7%;
+}
+
+.carouselImage {
+  max-width: 800px;
+  pointer-events: none;
+}
+
+.slick-slider {
+  max-height: 400px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon {
+  height: 50px;
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 50px;
+}
+
+.headerIcon {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ───────────── ASCIINEMA ───────────── */
+div.asciinemaPlayer h1 {
+  color: antiquewhite;
+  font-size: 2em;
+  margin-bottom: 1em;
+
+  text-align: center;
+}
+
+/* ───────────── FOOTER ───────────── */
+footer {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+footer a {
+  color: antiquewhite;
+}
+
+/* ───────────── RESPONSIVE ───────────── */
+
+@media (max-width: 1800px) {
+  div.headerDescription {
+    background-color: #464a57;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+    padding-top: 2em;
+    padding-bottom: 3em;
+    flex-wrap: wrap;
+  }  
+
+  div.downloadSection {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+
+  .downloadButtons {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .systemRequirements {
+    width: 200% !important;
+    max-height: fit-content;
+  }
+
+  div.headerDescriptionText {
+    overflow-wrap: break-word;
+    margin-right: 20%;
+  }
+  
+  .carouselContainer {
+    margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1.headerSubtitle, .commandImage {
+    display: none;
+  }
+
+  .downloadButtonsSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .downloadButtonLeft,
+  .downloadButtonRight {
+    border-radius: 10px !important;
+    margin: 0.5em 0;
+    width: 100%;
+    padding: 1em;
+  }
+
+  .systemRequirements {
+    width: 100% !important;
+    max-width: fit-content;
+  }
+
+  div.headerDescription {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  div.headerDescriptionText {
+    overflow-wrap: break-word;
+  }
+
+  .carouselContainer {
+    display: none;
+  }
+}
