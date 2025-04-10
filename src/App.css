@@ -58,8 +58,8 @@ div.description {
   background-color: #464a57;
   display: flex;
   justify-content: space-between;
-  padding-top: 6em;
-  padding-bottom: 4em;
+  padding-top: 10em;
+  padding-bottom: 5em;
   flex-wrap: wrap;
 }
 
