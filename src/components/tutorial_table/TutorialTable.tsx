@@ -1,14 +1,17 @@
-import React from 'react';
-
-const repository = ["Trackit Init", "Trackit Ignore", "Trackit Clone"];
-const stagingArea = ["Trackit Stage", "Trackit Unstage", "Trackit Status"];
-const commit = ["Trackit Commit", "Trackit Checkout", "Trackit Restore", "Trackit Tag"];
-const branch = ["Trackit Branch", "Trackit Merge"];
-const remote = ["Trackit Push", "Trackit Pull", "Trackit Fetch"];
-const administration = ["Trackit Log", "Trackit Diff", "Trackit Blame", "Trackit GR", "Trackit Config"];
-const permissions = ["Trackit User", "Trackit Role", "Trackit BranchPerms", "Trackit RolePerms"];
+import React, { useState } from 'react';
 
 const TutorialTable = () => {
+  const [activeSection, setActiveSection] = useState(null);
+  const [activeTable, setActiveTable] = useState(true);
+
+  const repository = ["Trackit Init", "Trackit Ignore", "Trackit Clone"];
+  const stagingArea = ["Trackit Stage", "Trackit Unstage", "Trackit Status"];
+  const commit = ["Trackit Commit", "Trackit Checkout", "Trackit Restore", "Trackit Tag"];
+  const branch = ["Trackit Branch", "Trackit Merge"];
+  const remote = ["Trackit Push", "Trackit Pull", "Trackit Fetch"];
+  const administration = ["Trackit Log", "Trackit Diff", "Trackit Blame", "Trackit Garbage Recollector", "Trackit Config"];
+  const permissions = ["Trackit User", "Trackit Role", "Trackit BranchPermissions", "Trackit RolePermissions"];
+
   const sections = [
     { title: "Repository", items: repository },
     { title: "Staging Area", items: stagingArea },
@@ -19,23 +22,45 @@ const TutorialTable = () => {
     { title: "Permissions", items: permissions },
   ];
 
+  // Toggle section visibility for mobile view
+  const toggleSection = (index) => {
+    setActiveSection(activeSection === index ? null : index);
+  };
+
+  const toggleTable = () => {
+    setActiveTable(!activeTable);
+  };
+
+  // Check if it's a mobile view
+  const isMobile = window.innerWidth <= 768;
+
   return (
-    <table className="tutorialTable">
-        <tbody>
-            {sections.map((section, sectionIndex) => (
-                <React.Fragment key={sectionIndex}>
-                    <tr>
-                        <th colSpan={2}>{section.title}</th>
-                    </tr>
-                    {section.items.map((tutorial, index) => (
-                        <tr key={index}>
-                            <td>{tutorial}</td>
-                        </tr>
-                    ))}
-                </React.Fragment>
-            ))}
-        </tbody>
-    </table>
+      <div className={`tutorialTable  ${activeTable && dontHide ? "" : "hidden"}`}>
+        <div className="tutorialTitle" onClick={toggleTable}>
+            <h3 style={{ cursor: 'pointer' }}>{activeTable ? 'Tutorials ▲' : '▼'}</h3>
+        </div>
+
+        {sections.map((section, sectionIndex) => (
+          <div key={sectionIndex} className={`tableSection`}>
+
+            <div 
+              className={`sectionHeader ${activeSection === sectionIndex ? 'active' : ''}`}
+              onClick={() => isMobile && toggleSection(sectionIndex)}>
+              <h3>{section.title}</h3>
+              {isMobile && <span className="toggle-icon">{activeSection === sectionIndex ? '−' : '+'}</span>}
+            </div>
+
+            <div className={`sectionItems ${isMobile && activeSection !== sectionIndex ? 'hidden' : ''}`}>
+              {section.items.map((tutorial, index) => (
+                <div className="tutorialItem" key={index}>
+                  {tutorial}
+                </div>
+              ))}
+            
+            </div>
+          </div>
+        ))}
+      </div>
   );
 };
 

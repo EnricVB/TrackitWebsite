@@ -1,11 +1,7 @@
-
 /* ───────────── DOWNLOAD SECTION ───────────── */
 div.downloadSection {
   overflow-wrap: anywhere;
-  padding-left: 22%;
-  padding-right: 7%;
-  padding-top: 12em;
-  padding-bottom: 7em;
+  padding: 12em 7% 7em 22%;
   display: flex;
   justify-content: space-between;
   gap: 2em;
@@ -15,7 +11,7 @@ div.downloadSection {
 div.downloadSectionTitle h1 {
   color: antiquewhite;
   font-size: 2em;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 div.downloadSectionTitle h3 {
@@ -32,6 +28,7 @@ div.downloadSectionTitle {
 .downloadButtons {
   width: 100%;
   max-width: 300px;
+  padding-top: 7em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -121,14 +118,11 @@ download:hover {
 }
 
 /* ───────────── RESPONSIVE ───────────── */
-
 @media (max-width: 1800px) {
   div.downloadSection {
     flex-direction: column;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 5%;
+    padding: 5% 10%;
   }
 
   .downloadButtons {

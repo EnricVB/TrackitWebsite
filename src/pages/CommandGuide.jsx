@@ -10,19 +10,19 @@ class CommandGuide extends React.Component {
   render() {
     return (
       <div className="website">
-        <div className="tutorialTableDiv">
-          <TutorialTable/>
-        </div>
+        <TutorialTable/>
 
-        <div className="titleSection">
-          <h1 className="title">Guía de Comandos</h1>
-          <p className="description">
-            Esta guía contiene una lista de comandos útiles para interactuar con el sistema.
-          </p>
-        </div>
+        <div className="guide">
+          <div className="titleSection">
+            <h1 className="title">Guía de Comandos</h1>
+            <p className="description">
+              Esta guía contiene una lista de comandos útiles para interactuar con el sistema.
+            </p>
+          </div>
 
-        {/* Footer y Aprender más*/}
-        <Footer/>
+          {/* Footer y Aprender más*/}
+          <Footer/>
+        </div>
       </div>
     );
   }
