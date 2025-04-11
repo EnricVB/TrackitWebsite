@@ -61,12 +61,12 @@ h1.headerSubtitle {
 
 
 /* ───────────── TEXT STYLES ───────────── */
-b {
+b, th, h1 {
   color: #ece7e7;
   font-weight: bold;
 }
 
-p {
+p, td {
   color: #a2cab7;
   font-size: 1.15em;
 }
@@ -156,8 +156,6 @@ footer {
 footer a {
   color: antiquewhite;
 }
-
-
 
 /* ───────────── RESPONSIVE ───────────── */
 

@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 import Home from 'pages/Home';
 import Download from 'pages/Download';
+import CommandGuide from 'pages/CommandGuide';
 import Header from 'components/website/Header';
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/download" element={<Download />} />
+          <Route path="/commandguide" element={<CommandGuide />} />
         </Routes>
       </div>
     );

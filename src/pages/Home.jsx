@@ -45,7 +45,7 @@ class App extends React.Component {
             <img src={log} className="carouselImage"/>, 
           ]}/>
         </div>
-        
+
         {/* Sección "Porque Trackit" */}
         <div id="whyTrackit" className="whyTrackitSection">
           <h2 className="whyTrackitTitle">Por qué TRACKIT</h2>

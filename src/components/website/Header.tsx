@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Link } from 'react-router-dom';
 
 import trackitIcon from 'assets/icons/trackit-icon.png';

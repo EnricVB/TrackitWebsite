@@ -75,6 +75,8 @@ class Download extends React.Component {
             <ul>
               <li>Windows 10+, macOS 11+, Linux (Ubuntu 20+)</li>
               <li>Java 22+</li>
+              <li>20MB de Almacenamiento Disponible</li>
+              <li>Conexión a Internet</li>
             </ul>
           </div>
         </div>
