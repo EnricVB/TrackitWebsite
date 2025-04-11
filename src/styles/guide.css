@@ -105,7 +105,7 @@
     background-color: transparent;
     box-shadow: none;
     overflow: hidden;
-    margin: 0;
+    margin-top: 5em;
   }
 
   .tutorialTable.hidden > :not(.tutorialTitle) {
@@ -117,6 +117,7 @@
   .tutorialTable {
     max-width: 450px;
     position: absolute;
+    margin-top: 5em;
   }
 }
 
@@ -131,6 +132,6 @@
   }
   
   .tutorialTable {
-    padding-top: 0;
+    margin-top: 5em;
   }
 }
