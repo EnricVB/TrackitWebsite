@@ -12,6 +12,7 @@ div.descriptionText {
   text-align: justify;
   flex: 1 1 400px;
   padding-top: 2em;
+  margin-right: 2em;
 }
 
 div.descriptionImage {
@@ -57,7 +58,7 @@ div.descriptionImage {
   }
 
   div.descriptionText {
-    margin-right: 0;
+    margin-right: 2em;
     padding-left: 0;
     text-align: center;
   }
@@ -76,7 +77,7 @@ div.descriptionImage {
   }
 
   div.descriptionText {
-    margin-right: 0;
+    margin-right: 2em;
   }
 
   .carouselContainer {

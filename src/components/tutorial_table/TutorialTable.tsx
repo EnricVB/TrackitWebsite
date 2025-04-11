@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const TutorialTable = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [activeTable, setActiveTable] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const repository = ["Trackit Init", "Trackit Ignore", "Trackit Clone"];
   const stagingArea = ["Trackit Stage", "Trackit Unstage", "Trackit Status"];
@@ -31,11 +44,8 @@ const TutorialTable = () => {
     setActiveTable(!activeTable);
   };
 
-  // Check if it's a mobile view
-  const isMobile = window.innerWidth <= 768;
-
   return (
-      <div className={`tutorialTable  ${activeTable && dontHide ? "" : "hidden"}`}>
+      <div className={`tutorialTable  ${activeTable ? "" : "hidden"}`}>
         <div className="tutorialTitle" onClick={toggleTable}>
             <h3 style={{ cursor: 'pointer' }}>{activeTable ? 'Tutorials ▲' : '▼'}</h3>
         </div>

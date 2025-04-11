@@ -1,3 +1,8 @@
+.website {
+  display: flex;
+  flex-direction: column !important;
+  width: 100%;
+}
 
 /* ───────────── GENERAL ───────────── */
 body {
