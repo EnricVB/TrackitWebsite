@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
         <h2>¿Quieres aprender más?</h2>
         <p>
           Descubre más sobre Trackit, su implementación, y cómo sacarle el máximo provecho en nuestros
-          <a href="https://github.com/EnricVB/Trackit" target="_blank" rel="noopener noreferrer">
-            : recursos y documentación.
-          </a>
+          <NavLink to="/commandguide">: recursos y documentación.</NavLink>
         </p>
       </div>
 

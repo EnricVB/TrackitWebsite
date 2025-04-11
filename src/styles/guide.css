@@ -52,7 +52,7 @@ Footer {
 }
 
 .tutorialTable td {
-  padding-right: 1em;
+  padding-right: 2em;
   padding-left: 2em;
   
   font-weight: 100;
@@ -63,24 +63,6 @@ Footer {
 .tutorialTable td:hover, .tutorialTable td:active {
   background-color: #ffffff3d;
   cursor: pointer;
-}
-
-/* ───────────── SCROLL ───────────── */
-
-.tutorialTable::-webkit-scrollbar {
-  background-color: #000000;
-}
-
-.tutorialTable::-webkit-scrollbar-thumb {
-  background-color: #ffffff77;
-}
-
-.tutorialTable::-webkit-scrollbar-thumb:hover {
-  background-color: #ffffff99;
-}
-
-.tutorialTable::-webkit-scrollbar-thumb:active {
-  background-color: #ffffffbb;
 }
 
 /* ───────────── RESPONSIVE ───────────── */

@@ -5,8 +5,8 @@ const stagingArea = ["Trackit Stage", "Trackit Unstage", "Trackit Status"];
 const commit = ["Trackit Commit", "Trackit Checkout", "Trackit Restore", "Trackit Tag"];
 const branch = ["Trackit Branch", "Trackit Merge"];
 const remote = ["Trackit Push", "Trackit Pull", "Trackit Fetch"];
-const administration = ["Trackit Log", "Trackit Diff", "Trackit Blame", "Trackit Garbage Recollector", "Trackit Config"];
-const permissions = ["Trackit User", "Trackit Role", "Trackit BranchPermission", "Trackit RolePermission"];
+const administration = ["Trackit Log", "Trackit Diff", "Trackit Blame", "Trackit GR", "Trackit Config"];
+const permissions = ["Trackit User", "Trackit Role", "Trackit BranchPerms", "Trackit RolePerms"];
 
 const TutorialTable = () => {
   const sections = [
@@ -25,7 +25,7 @@ const TutorialTable = () => {
             {sections.map((section, sectionIndex) => (
                 <React.Fragment key={sectionIndex}>
                     <tr>
-                        <th colSpan="2">{section.title}</th>
+                        <th colSpan={2}>{section.title}</th>
                     </tr>
                     {section.items.map((tutorial, index) => (
                         <tr key={index}>
