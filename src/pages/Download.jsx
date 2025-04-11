@@ -1,6 +1,7 @@
 import React from "react";
-import './styles/App.css';
-import './styles/Download.css';
+import 'styles/global.css';
+import 'styles/download.css';
+import Footer from 'components/website/Footer';
 
 class Download extends React.Component {
   constructor(props) {
@@ -55,26 +56,7 @@ class Download extends React.Component {
 
   render() {
     return (
-      <div className="website">
-        {/* Header: Título + Descripción */}
-        <div className="header">
-          <div className="headerTitle">
-            <img className="icon headerIcon" src={trackitIcon} />
-            <h1 className="headerTitle headerIcon">Trackit</h1>
-            <h1 className="headerSubtitle">Sistema de Control de Versiones</h1>
-            
-            {/* Botón de descarga en el Header */}
-            <div className="buttonsInHeader">
-              <a href="https://github.com/EnricVB/Trackit" target="_blank" rel="noopener noreferrer">
-                Descargar Trackit
-              </a>
-              <a href="#whyTrackit">
-                Más sobre Trackit
-              </a>
-            </div>
-          </div>
-        </div>
-        
+      <div className="website">        
         <div className="downloadSection">
           <div className="downloadButtons">
             <div className="downloadButtonsSection">
@@ -97,10 +79,8 @@ class Download extends React.Component {
           </div>
         </div>
 
-        {/* Footer */}
-        <footer className="footer">
-          <p>© 2025 Trackit | <a href="https://github.com/EnricVB/Trackit">GitHub</a> | MIT License</p>
-        </footer>
+        {/* Footer y Aprender más*/}
+        <Footer/>
       </div>
     );
   }
