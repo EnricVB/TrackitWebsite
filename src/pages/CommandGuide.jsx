@@ -3,6 +3,7 @@ import 'styles/global.css';
 import 'styles/guide.css';
 
 import TutorialTable from "components/tutorial_table/TutorialTable";
+import InitCommand from "components/tutorial_table/command_guides/IgnoreCommand";
 import Footer from 'components/website/Footer';
 
 
@@ -20,6 +21,8 @@ class CommandGuide extends React.Component {
             </p>
           </div>
 
+
+          <InitCommand/>
           {/* Footer y Aprender más*/}
           <Footer/>
         </div>

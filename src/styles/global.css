@@ -66,7 +66,7 @@ h1.headerSubtitle {
 
 
 /* ───────────── TEXT STYLES ───────────── */
-b, th, h1 {
+b, th, h1 , h2, h3 {
   color: #ece7e7;
   font-weight: bold;
 }
@@ -74,6 +74,71 @@ b, th, h1 {
 p, td {
   color: #a2cab7;
   font-size: 1.15em;
+}
+
+commandTitle {
+  display: block;
+  text-align: center;
+  
+  color: #ffffff;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+codeBlock {
+  display: block;
+  background-color: #f5f5f568; 
+  color: #333;
+  padding: 1em;
+  padding-top: 1.5em;
+  margin: 1em 0;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  white-space: pre;
+  overflow-x: auto;
+  position: relative;
+}
+
+codeBlock::before {
+  content: 'bash';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #444;
+  padding: 0.5em;
+  font-size: 0.65em;
+  border-bottom-left-radius: 6px;
+  font-family: sans-serif;
+}
+
+code {
+  background-color: #0000002f;
+  padding: 0.2em 0.4em 0.2em 0.4em;
+  border-radius: 5px;
+}
+
+ul {
+  margin: 1em 0;
+  padding-left: 2em;
+  list-style-type: disc;
+  color: antiquewhite;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-top: 0.5em;
+}
+
+ul ul ul {
+  list-style-type: square;
 }
 
 /* ───────────── ICONS / IMAGES ───────────── */

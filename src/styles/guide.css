@@ -91,6 +91,31 @@
   margin-top: 10em;
 }
 
+.command_tutorial {
+  margin-top: 5em;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+section {
+  margin-top: 5em;
+}
+
+h3.sectionTitle {
+  text-align: center;
+  
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+
+th {
+  text-align: left;
+}
+
+td code {
+  white-space: nowrap;
+}
+
 @media (min-width: 769px) {
   .tutorialTable {
     max-width: 450px;
