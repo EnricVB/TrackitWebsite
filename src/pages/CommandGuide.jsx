@@ -3,7 +3,7 @@ import 'styles/global.css';
 import 'styles/guide.css';
 
 import TutorialTable from "components/tutorial_table/TutorialTable";
-import InitCommand from "components/tutorial_table/command_guides/GarbageCollectorCommand";
+import InitCommand from "components/tutorial_table/command_guides/ConfigCommand";
 import Footer from 'components/website/Footer';
 
 
