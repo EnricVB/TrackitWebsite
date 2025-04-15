@@ -3,7 +3,7 @@ import 'styles/global.css';
 import 'styles/guide.css';
 
 import TutorialTable from "components/tutorial_table/TutorialTable";
-import InitCommand from "components/tutorial_table/command_guides/UnstageCommand";
+import InitCommand from "components/tutorial_table/command_guides/StatusCommand";
 import Footer from 'components/website/Footer';
 
 
