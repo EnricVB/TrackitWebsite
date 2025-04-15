@@ -7,7 +7,8 @@
 .tutorialTable {
   background-color: #212224;
   color: antiquewhite;
-  position: absolute;
+  position: fixed;
+  z-index: 100000;
   
   margin-top: 5em;
   height: calc(100vh - 5em);
@@ -25,6 +26,8 @@
   overflow: hidden;
   width: auto;
   height: auto;
+  position: fixed;
+  z-index: 100000;
 }
 
 .tutorialTable.hidden > :not(.tutorialTitle) {
@@ -124,6 +127,8 @@ div.example {
   .tutorialTable {
     max-width: 450px;
     padding-top: 0;
+    position: fixed;
+    z-index: 100000;
   }
   
   .toggle-icon {
@@ -147,6 +152,8 @@ div.example {
     max-width: 450px;
     position: absolute;
     margin-top: 5em;
+    position: fixed;
+    z-index: 100000;
   }
 }
 
@@ -162,5 +169,7 @@ div.example {
   
   .tutorialTable {
     margin-top: 5em;
+    position: fixed;
+    z-index: 100000;
   }
 }
