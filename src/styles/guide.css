@@ -116,6 +116,10 @@ td code {
   white-space: nowrap;
 }
 
+div.example {
+  margin-top: 5em;
+}
+
 @media (min-width: 769px) {
   .tutorialTable {
     max-width: 450px;
