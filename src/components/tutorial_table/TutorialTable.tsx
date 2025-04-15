@@ -23,7 +23,7 @@ const TutorialTable = () => {
   const branch = ["Trackit Branch", "Trackit Merge"];
   const remote = ["Trackit Push", "Trackit Pull", "Trackit Fetch"];
   const administration = ["Trackit Log", "Trackit Diff", "Trackit Blame", "Trackit Garbage Recollector", "Trackit Config"];
-  const permissions = ["Trackit User", "Trackit Role", "Trackit BranchPermissions", "Trackit RolePermissions"];
+  const permissions = ["Trackit User", "Trackit Role"];
 
   const sections = [
     { title: "Repository", items: repository },
