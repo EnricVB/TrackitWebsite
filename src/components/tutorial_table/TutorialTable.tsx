@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
-const TutorialTable = () => {
+const TutorialTable = ({ onSelectedCommand }) => {
   const [activeSection, setActiveSection] = useState(null);
   const [activeTable, setActiveTable] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
-    checkMobile();
-    
-    window.addEventListener('resize', checkMobile);
 
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -35,7 +33,6 @@ const TutorialTable = () => {
     { title: "Permissions", items: permissions },
   ];
 
-  // Toggle section visibility for mobile view
   const toggleSection = (index) => {
     setActiveSection(activeSection === index ? null : index);
   };
@@ -45,32 +42,36 @@ const TutorialTable = () => {
   };
 
   return (
-      <div className={`tutorialTable  ${activeTable ? "" : "hidden"}`}>
-        <div className="tutorialTitle" onClick={toggleTable}>
-            <h3 style={{ cursor: 'pointer' }}>{activeTable ? 'Tutorials ▲' : '▼'}</h3>
-        </div>
-
-        {sections.map((section, sectionIndex) => (
-          <div key={sectionIndex} className={`tableSection`}>
-
-            <div 
-              className={`sectionHeader ${activeSection === sectionIndex ? 'active' : ''}`}
-              onClick={() => isMobile && toggleSection(sectionIndex)}>
-              <h3>{section.title}</h3>
-              {isMobile && <span className="toggle-icon">{activeSection === sectionIndex ? '−' : '+'}</span>}
-            </div>
-
-            <div className={`sectionItems ${isMobile && activeSection !== sectionIndex ? 'hidden' : ''}`}>
-              {section.items.map((tutorial, index) => (
-                <div className="tutorialItem" key={index}>
-                  {tutorial}
-                </div>
-              ))}
-            
-            </div>
-          </div>
-        ))}
+    <div className={`tutorialTable  ${activeTable ? "" : "hidden"}`}>
+      <div className="tutorialTitle" onClick={toggleTable}>
+        <h3 style={{ cursor: 'pointer' }}>{activeTable ? 'Tutorials ▲' : '▼'}</h3>
       </div>
+
+      {sections.map((section, sectionIndex) => (
+        <div key={sectionIndex} className={`tableSection`}>
+
+          <div
+            className={`sectionHeader ${activeSection === sectionIndex ? 'active' : ''}`}
+            onClick={() => isMobile && toggleSection(sectionIndex)}>
+            <h3>{section.title}</h3>
+            {isMobile && <span className="toggle-icon">{activeSection === sectionIndex ? '−' : '+'}</span>}
+          </div>
+
+          <div className={`sectionItems ${isMobile && activeSection !== sectionIndex ? 'hidden' : ''}`}>
+            {section.items.map((tutorial, index) => (
+              <div
+                className="tutorialItem" 
+                key={index}
+                onClick={() => onSelectedCommand(tutorial)}
+              >
+                {tutorial}
+              </div>
+            ))}
+
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

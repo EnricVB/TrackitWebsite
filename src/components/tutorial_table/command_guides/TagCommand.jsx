@@ -39,7 +39,7 @@ class TagCommands extends React.Component {
             <tr><td><code>-h, --help</code></td><td>Muestra la ayuda.</td></tr>
           </table>
 
-          <h4 className="subsectionTitle">Ejemplos:</h4>
+          <h3 className="sectionTitle">Ejemplos:</h3>
           <ul>
             <li><code>trackit create-tag -n v1.0.0 -m "Primera versión estable"</code><br />Crea una etiqueta compleja.</li>
             <li><code>trackit create-tag -n hotfix-123 -c a1b2c3</code><br />Crea una etiqueta simple sobre un commit específico.</li>
@@ -67,7 +67,7 @@ class TagCommands extends React.Component {
             <tr><td><code>-v, --verbose</code></td><td>Modo detallado.</td></tr>
           </table>
 
-          <h4 className="subsectionTitle">Ejemplo:</h4>
+          <h3 className="sectionTitle">Ejemplo:</h3>
           <ul>
             <li><code>trackit assign-tag -n v1.0.0 -c 123456 789abc</code><br />Asigna la etiqueta <code>v1.0.0</code> a dos commits.</li>
           </ul>
@@ -92,7 +92,7 @@ class TagCommands extends React.Component {
             <tr><td><code>-v, --verbose</code></td><td>Modo detallado.</td></tr>
           </table>
 
-          <h4 className="subsectionTitle">Ejemplo:</h4>
+          <h3 className="sectionTitle">Ejemplo:</h3>
           <ul>
             <li><code>trackit list-tags</code><br />Muestra todas las etiquetas creadas en el repositorio.</li>
           </ul>
@@ -114,7 +114,7 @@ class TagCommands extends React.Component {
             <tr><td><code>-t, --tag</code></td><td>Una o más etiquetas a aplicar al nuevo commit.</td></tr>
           </table>
 
-          <h4 className="subsectionTitle">Ejemplo:</h4>
+          <h3 className="sectionTitle">Ejemplo:</h3>
           <ul>
             <li>
               <code>trackit commit -t hotfix-23 "Fix crash" "Resolved null pointer issue in LoginService"</code><br />
