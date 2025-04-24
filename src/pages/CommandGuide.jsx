@@ -61,8 +61,8 @@ class CommandGuide extends React.Component {
         <TutorialTable onSelectedCommand={this.handleSelectCommand} />
 
         <div className="guide">
-          {SelectedComponent ? 
-            <SelectedComponent/> :
+          {SelectedComponent ?
+            <SelectedComponent /> :
             <div className="titleSection">
               <h1 className="title">Guía de Comandos</h1>
               <p className="description">
@@ -70,10 +70,11 @@ class CommandGuide extends React.Component {
               </p>
             </div>
           }
-
-          {/* Footer y Aprender más*/}
-          <Footer/>
         </div>
+
+
+        {/* Footer y Aprender más*/}
+        <Footer />
       </div>
     );
   }

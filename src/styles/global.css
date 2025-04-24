@@ -12,7 +12,7 @@ body {
 
 /* ───────────── GENERAL HEADER ───────────── */
 div.header {
-  background-color: #363840ce;
+  background-color: #3a3a3abe;
   backdrop-filter: blur(4px);
   box-shadow: 0px 20px 50px #243035;
 
@@ -189,7 +189,7 @@ div.asciinemaPlayer h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #464a57;
+  background-color: #3838388a;
   padding-bottom: 4em;
 }
 
@@ -222,6 +222,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   background-color: #212224;
   color: antiquewhite;
   padding: 1rem;
@@ -242,7 +243,6 @@ footer a {
 
 @media (max-width: 1024px) {
   div.header {
-    background-color: #363840ce;
     backdrop-filter: blur(4px);
     box-shadow: 0px 20px 50px #243035;
 
