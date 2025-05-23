@@ -18,11 +18,11 @@ class Download extends React.Component {
 
   createDownloadSection = (os, label, fileName) => (
     <div className={`${os}Section`}>
-      <button href={`/trackit-${fileName}.zip`} className="downloadButton downloadButtonLeft">
+      <button href={`https://github.com/EnricVB/Trackit/blob/master/docs/README_es.md`} className="downloadButton downloadButtonLeft">
         Descargar
       </button>
       
-      <button href={`/trackit-${fileName}.zip`} className="downloadButton downloadButtonRight">
+      <button href={`https://github.com/EnricVB/Trackit/blob/master/docs/README_es.md`} className="downloadButton downloadButtonRight">
         {os === 'windows' && '.exe (Windows)'}
         {os === 'macos' && '.dmg (macOS)'}
         {os === 'linux' && '.tar.gz (Linux)'}
